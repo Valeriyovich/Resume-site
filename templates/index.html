@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Personal Page</title>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="One Page Personal" name="description">
+    <meta content="Andreii" name="author">
+    <!--Fav-->
+    
+    
+    <!--styles-->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/owl.carousel.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/owl.theme.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet">
+    
+    <!--fonts google-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    
+    <!--[if lt IE 9]>
+       <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--PRELOADER-->
+    <div id="preloader">
+      <div id="status">
+        <!-- <img alt="logo" src="{{ url_for('static',filename='images/logo-big.png') }}"> -->
+      </div>
+    </div>
+    <!--/.PRELOADER END-->
+
+    <!--HEADER -->
+    <div class="header">
+      <div class="for-sticky">
+        <!--LOGO-->
+        <div class="col-md-2 col-xs-6 logo">
+          <a href="/">
+            <span style="font-size: 1.8em;"> A.<> </span>
+          </a>
+        </div>
+        <!--/.LOGO END-->
+      </div>
+      <div class="menu-wrap">
+        <nav class="menu">
+          <div class="menu-list">
+            <a data-scroll="" href="#home" class="active">
+              <span>Home</span>
+            </a>
+            <a data-scroll="" href="#about">
+              <span>About</span>
+            </a>
+            <a data-scroll="" href="#work">
+              <span>Work</span>
+            </a>
+             <a data-scroll="" href="#services">
+              <span>Services</span>
+            </a>
+            <a data-scroll="" href="#employement">
+              <span>Employement</span>
+            </a>
+            <a data-scroll="" href="#skill">
+              <span>Skills</span>
+            </a>
+            <a data-scroll="" href="#education">
+              <span>Education</span>
+            </a>
+            <a data-scroll="" href="#testimonial">
+              <span>Testimonial</span>
+            </a>
+            
+            <a data-scroll="" href="#contact">
+              <span>Contact</span>
+            </a>
+          </div>
+        </nav>
+        <button class="close-button" id="close-button">Close Menu</button>
+      </div>
+      <button class="menu-button" id="open-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!--/.for-sticky-->
+    </div>
+    <!--/.HEADER END-->
+    
+    <!--CONTENT WRAP-->
+    <div class="content-wrap">
+      <!--CONTENT-->
+      
+      <div class="content">
+        {% if result != ''%}
+        
+        <section id="answer">
+          <div class="alert alert-success alert_message " style="height: 20vh; top:0; left:0; margin:0; " role="alert">
+            
+           <div class="col-6 pt-5" style="margin-top: 10vh">
+              <p class="text-center">
+                Thanks {{result['Name']}} for you'r email, i will reply as soon as possible!
+              </p>
+              <button class="btn close_btn_answer" style="position: absolute; top: 6vh; right: 0;">
+                x
+              </button>
+           </div>
+           
+          </div>
+          
+        </section>
+        
+        {% endif %}
+        <!--HOME-->
+        <section id="home">
+          <div class="container">
+            <div class="row">
+              <div class="wrap-hero-content">
+                  <div class="hero-content">
+                    <h1>Hello</h1>
+                    <br>
+                    <span class="typed"></span>
+                  </div>
+              </div>
+              <div class="mouse-icon margin-20">
+                <div class="scroll"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--/.HOME END-->
+        
+        <!--ABOUT-->
+        <section id="about">
+          <div class="col-md-6 col-xs-12 no-pad">
+            <div class="bg-about"></div>
+          </div>
+          <div class="col-md-6 col-sm-12 col-xs-12 white-col">
+            <div class="row">
+              <!--OWL CAROUSEL2-->
+              <div class="owl-carousel2">
+                <div class="col-md-12">
+                  <div class="wrap-about">
+                    <div class="w-content">
+                      <p class="head-about">
+                        The difficulty with working with a programmer is that you can't figure out what he's doing until it's too late.
+                      </p>
+                      
+                      <h5 class="name">
+                        Seymour Cray
+                      </h5>
+                      <img alt="signature" src="{{ url_for('static',filename='images/signature.jpeg') }}">
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-md-12 col-sm-12 col-xs-12 white-col">
+                  <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+                      <div class="wrap-about">
+                        <table class="w-content">
+                          <tr>
+                            <td class="title">Name </td>
+                            <td class="break">:</td>
+                            <td> Andreii</td>
+                          </tr>
+                          <tr>
+                            <td class="title">Phone </td>
+                            <td class="break">:</td>
+                            <td> +380663001232</td>
+                          </tr>
+                          <tr>
+                            <td class="title">Email </td>
+                            <td class="break">:</td>
+                            <td> pushchykov@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <td class="title">Address </td>
+                            <td class="break">:</td>
+                            <td> Pivdenna street 17 , Mykolaiv, Ukraine</td>
+                          </tr>
+                          <tr>
+                            <td class="title">Telegram </td>
+                            <td class="break">:</td>
+                            <td> @sp1k3x</td>
+                          </tr>
+                          <tr>
+                            <td class="title">NickName </td>
+                            <td class="break">:</td>
+                            <td> sp1k3</td>
+                          </tr>
+                          <tr>
+                            <td class="title">Role </td>
+                            <td class="break">:</td>
+                            <td> Full Stack</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/.OWL CAROUSEL2 END-->
+            </div>
+          </div>
+        </section>
+        <!--/.ABOUT END-->
+
+        <!--WORK-->
+        <section class="grey-bg mar-tm-10" id="work">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <h3 class="title-small">
+                  <span>Work</span>
+                </h3>
+                <p class="content-detail">
+                  Programming today is a race in which software developers race to build more quality idiot-proof software, and the universe races to produce more quality idiots. As long as the universe wins.
+                <br>  
+                <br>
+                  Any of your code that you haven't looked at for more than six months will look like code that someone else wrote.
+                </p>
+              </div>
+              <div class="col-md-9 content-right">
+                <!--PORTFOLIO IMAGE-->
+                <ul class="portfolio-image">
+                  <li class="col-md-6">
+                    <a href="{{ url_for('static',filename='images/bw-1.jpeg') }}"><img alt="image" src="{{ url_for('static',filename='images/bw-1.jpeg') }}">
+                      <div class="decription-wrap">
+                        <div class="image-bg">
+                           <p class="desc">Vegetarian website</p>
+                        </div>
+
+                      </div>
+                    </a>
+                  </li>
+                  <li class="col-md-6">
+                    <a href="{{ url_for('static',filename='images/bw-2.jpeg') }}"><img alt="image" src="{{ url_for('static',filename='images/bw-2.jpeg' ) }}">
+                      <div class="decription-wrap">
+                        <div class="image-bg">
+                          <p class="desc">
+                            Real estate website
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="col-md-6">
+                    <a href="{{ url_for('static',filename='images/bw-3.jpeg' ) }}"><img alt="image" src="{{ url_for('static',filename='images/bw-3.jpeg') }}">
+                      <div class="decription-wrap">
+                        <div class="image-bg">
+                          <p class="desc">
+                            My code
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="col-md-6">
+                    <a href="{{ url_for('static',filename='images/bw-4.jpeg') }}"><img alt="image" src="{{ url_for('static',filename='images/bw-4.jpeg') }}">
+                      <div class="decription-wrap">
+                        <div class="image-bg">
+                          <p class="desc">
+                            telegram Bot
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  
+                </ul>
+                <!--/.PORTFOLIO IMAGE END-->
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--/.WORK END-->
+
+        <!--SERVICES-->
+        <section class="white-bg" id="services">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <h3 class="title-small">
+                  <span>Services</span>
+                </h3>
+                <p class="content-detail">
+                  Ready to provide the following services:
+                    HTML creator,
+                    Development of CSS animation,
+                    Front-end development,
+                    Back-end development,
+                    telegram bots,
+                    Parsers
+                </p>
+              </div>
+              <div class="col-md-9 content-right">
+                <div class="row">
+                  <ul class="listing-item">
+                    <li>
+                      <div class="col-md-4 col-sm-4">
+                        <h3 class="icon-use">
+                          m
+                        </h3>
+                        <p class="head-sm">
+                          FRONT END
+                        </p>
+                        <p class="text-grey">
+                          For the development of the front-end part I use Javascript and Typescript, based on ES6
+                      
+                        </p>
+                      </div>
+                    </li>
+                    
+
+                    <li>
+                      <div class="col-md-4 col-sm-4">
+                        <h3 class="icon-use">
+                          b
+                        </h3>
+                        <p class="head-sm">
+                          BACK END
+                        </p>
+                        <p class="text-grey">
+                          I have experience with the languages:
+                          Python, Nod.js
+                          and async programming
+                        </p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="col-md-4 col-sm-4">
+                        <h3 class="icon-use">
+                          d
+                        </h3>
+                        <p class="head-sm">
+                          UI 
+                        </p>
+                        <p class="text-grey">
+                          Working with Figma and Photoshop
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <ul class="listing-item">
+                    <li>
+                      <div class="col-md-4 col-sm-4">
+                        <p class="icon-use">
+                          f
+                        </p>
+                        <p class="head-sm">
+                          SOFT SKILLS
+                        </p>
+                        <p class="text-grey">
+                          English (ability to read/understand technical documentation and communicate);
+                          Good logic and analytical skills.
+                        </p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="col-md-4 col-sm-4">
+                        <h3 class="icon-use">
+                          p
+                        </h3>
+                        <p class="head-sm text-upercase">
+                          Creating Bots
+                        </p>
+                        <p class="text-grey">
+                          I will create a bot in telegram, discord, viber
+                        </p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="col-md-4 col-sm-4">
+                        <h3 class="icon-use">
+                          c
+                        </h3>
+                        <p class="head-sm">
+                          CRYPTO
+                        </p>
+                        <p class="text-grey">
+                          Work in investing company  
+                        </p>
+                      </div>
+                    </li>
+                    
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--/.SERVICES END-->
+
+        <!--EMPLOYEMENT-->
+        <section class="grey-bg" id="employement">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <h3 class="title-small">
+                  <span>Employement</span>
+                </h3>
+                <p class="content-detail">
+                  I have experience working as a Frontend Developer and Backend Developer in various companies
+                </p>
+              </div>
+              <div class="col-md-9 content-right">
+                <div class="row">
+                  <ul class="listing-item">
+                    <li>
+                      <div class="col-md-6 col-sm-6">
+                        <div class="wrap-card">
+                          <div class="card">
+                            <h2 class="year">
+                              2020 - 2021
+                            </h2>
+                            <p class="job">
+                              Front-end developer
+                            </p>
+                            <p class="company">
+                              Corp Project
+                            </p>
+                            <hr>
+                            <div class="text-detail">
+                              <p>
+                                We developed a corporate website, website logic and design for an investment company.
+                                Personal account and system alerts
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="col-md-6 col-sm-6">
+                        <div class="wrap-card">
+                          <div class="card">
+                            <h2 class="year">
+                              2021 - 2022
+                            </h2>
+                            <p class="job">
+                              Back-End Developer
+                            </p>
+                            <p class="company">
+                              Aquilon UG
+                            </p>
+                            <hr>
+                            <div class="text-detail">
+                              <p>
+                                A product company needed a back-end developer to work with the database and accounting
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>  
+                  
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--/.EMPLOYEMENT END-->
+
+        <!--SKILLS-->
+        <section class="white-bg" id="skill">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <h3 class="title-small">
+                  <span>Skills</span>
+                </h3>
+                <p class="content-detail">
+                  I have experience with third-party libraries and technologies
+                </p>
+              </div>
+              <div class="col-md-9 content-right">
+                <!--SKILLST-->
+                <div class="skillst">
+                  <div class="skillbar" data-percent="91%">
+                    <div class="title head-sm">
+                      HTML / CSS
+                    </div>
+                    <div class="count-bar">
+                      <div class="count"></div>
+                    </div>
+                  </div>
+                  <div class="skillbar" data-percent="77%">
+                    <div class="title head-sm">
+                      Javascript / Typescript
+                    </div>
+                    <div class="count-bar">
+                      <div class="count"></div>
+                    </div>
+                  </div>
+                  <div class="skillbar" data-percent="61%">
+                    <div class="title head-sm">
+                      React / Vue
+                    </div>
+                    <div class="count-bar">
+                      <div class="count"></div>
+                    </div>
+                  </div>
+                  <div class="skillbar" data-percent="68%">
+                    <div class="title head-sm">
+                      Python
+                    </div>
+                    <div class="count-bar">
+                      <div class="count"></div>
+                    </div>
+                  </div>
+                  <div class="skillbar" data-percent="65%">
+                    <div class="title head-sm">
+                      Photoshop / Figma
+                    </div>
+                    <div class="count-bar">
+                      <div class="count"></div>
+                    </div>
+                  </div>
+                </div>
+                <!--/.SKILLST END-->
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--/.SKILLS END-->
+
+        <!--EDUCATION-->
+        <section class="grey-bg" id="education">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <h3 class="title-small">
+                  <span>Education</span>
+                </h3>
+                <p class="content-detail">
+                  I studied at the University of Computer Technology and have a degree.
+                  Completed courses in front-end development
+                </p>
+              </div>
+              <div class="col-md-9 content-right">
+                <div class="row">
+                  <ul class="listing-item">
+                    <li>
+                      <div class="col-md-6 col-sm-6">
+                        <div class="wrap-card">
+                          <div class="card">
+                            <h2 class="year">
+                              2008 - 2013
+                            </h2>
+                            <p class="job">
+                              Information System
+                            </p>
+                            <p class="company">
+                              European University
+                            </p>
+                            <hr>
+                            <div class="text-detail">
+                              <p>
+                                Program Engineer, Faculty of Information Systems and Technology (FIST).
+                                GRADE: 90
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="col-md-6 col-sm-6">
+                        <div class="wrap-card">
+                          <div class="card">
+                            <h2 class="year">
+                              2018 - 2019
+                            </h2>
+                            <p class="job">
+                              FRONT - END Developer
+                            </p>
+                            <p class="company">
+                              STEP IT-Scool
+                            </p>
+                            <hr>
+                            <div class="text-detail">
+                              <p>
+                                front end development training and UI/UX 
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--/.EDUCATION END-->
+
+        <!--TESTIMONIAL-->
+        <section id="testimonial">
+          <div class="container">
+            <div class="row wrap-testimonial">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="owl-carousel">
+                  <div class="list-testimonial">
+                    <div class="content-testimonial">
+                      <h3 class="testi">
+                        “ Andreii did a phenominal job setting up my a website for my product He performed the task very quickly and efficiently. We know we have the superior topical pain relief cream on the market and he has helped us communicate that message via the website he built from scratch. Thanks! ”
+                      </h3>
+                      <p class="people">
+                        Dmytro Keris
+                      </p>
+                    </div>
+                  </div>
+                  <div class="list-testimonial">
+                    <div class="content-testimonial">
+                      <h3 class="testi">
+                        “ Another successful project working with Andreii. He has great  skills, is very responsive and professional. ”
+                      </h3>
+                      <p class="people">
+                        Marko Milicevic
+                      </p>
+                    </div>
+                  </div>
+                  <div class="list-testimonial">
+                    <div class="content-testimonial">
+                      <h3 class="testi">
+                        “ Great web master! Look forward to work with him again. Thanks!! ”
+                      </h3>
+                      <p class="people">
+                        Babakov George
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mask-testimonial"></div>
+        </section>
+        <!--/.TESTMONIAL END-->
+
+        <!--BLOG-->
+        
+        <!--/.BLOG END-->
+
+        <!--CONTACT-->
+        <section id="contact" class="white-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <h3 class="title-small">
+                  <span>Contact</span>
+                </h3>
+                <p class="content-detail">
+                  I work at any time of the day, contact form for Email:
+                </p>
+                <p class="content-detail">
+                  Or My telegram bot: <br>
+                  <a class=" btn btn-info tgbtn " target="_blank" href="https://t.me/sp1k3x">/start</a>
+                </p>
+
+              </div>
+              <div class="col-md-9 content-right">
+                <form action="/" method="POST">
+                  <div class="group">
+                    <input required="" id="clName" name="Name" type="text"><span class="highlight"></span><span class="bar"></span><label>Name</label>
+                  </div>
+                  <div class="group">
+                    <input required="" id="clEmail" name="Email" type="email"><span class="highlight"></span><span class="bar"></span><label>Email</label>
+                  </div>
+                  <div class="group">
+                    <textarea required="" id="clDisription" name="Disription"></textarea><span class="highlight"></span><span class="bar"></span><label>Message</label>
+                  </div>
+                  <input id="sendMessage"  type="submit" value="Send Message">
+                </form>
+                <table border = 1>
+                  
+               </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--/.CONTACT END-->
+        
+        <!--FOOTER-->
+        <footer>
+          <div class="footer-top">
+            <ul class="socials">
+              <li class="facebook">
+                <a href="https://www.linkedin.com/in/andreii-py-dev/" target="_blank" data-hover="Linkdin">Linkdin</a>
+              </li>
+              <li class="twitter">
+                <a href="https://twitter.com/pushchykov" target="_blank" data-hover="Twitter">Twitter</a>
+              </li>
+              <li class="gplus">
+                <a href="https://t.me/sp1k3x" target="_blank" data-hover="Telegram">Telegram</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="row">
+                <a href="/">
+                  <img width="100em" height="100em"  src="{{ url_for('static',filename='images/logo-bottom.jpeg' ) }}" alt="logo bottom" class="center-block" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!--/.FOOTER-END-->
+
+      <!--/.CONTENT END-->
+      </div>
+    <!--/.CONTENT-WRAP END-->
+    </div>
+    
+
+    <script src="{{ url_for('static',filename='js/jquery-1.9.1.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static',filename='js/jquery.appear.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static',filename='js/classie.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static',filename='js/owl.carousel.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static',filename='js/masonry.pkgd.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static',filename='js/masonry.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static',filename='js/smooth-scroll.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static',filename='js/typed.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static',filename='js/main.js') }}" type="text/javascript"></script>
+  </body>
+</html>
